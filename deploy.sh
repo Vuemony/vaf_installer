@@ -98,16 +98,18 @@ for f in serve.js.aes dummy_psn.json.aes loader.js userland.js types.js kernel.j
 done
 
 # Hardcoded lite config
-cat > "$DIST_LITE/download0/config.js" <<'LITECONF'
-var CONFIG = {
-    autolapse: true,
-    autopoop: false,
-    autoclose: true,
-    autoclose_delay: 0,
-    music: false,
-    jb_behavior: 0
-};
-var payloads = [];
+cat > "$DIST_LITE/download0/config.json" <<'LITECONF'
+{
+    "config": {
+        "autolapse": true,
+        "autopoop": false,
+        "autoclose": true,
+        "autoclose_delay": 0,
+        "music": false,
+        "jb_behavior": 0
+    },
+    "payloads": []
+}
 LITECONF
 
 echo "  lite variant built"

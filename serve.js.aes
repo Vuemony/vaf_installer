@@ -419,7 +419,7 @@ function extractZip(buf, zipSize) {
 // Phase 5: Verify extracted files using syscalls
 function verifyExtracted(callback) {
     log("=== Phase 5: Verifying files ===");
-    var files = ["types.js", "defs.js", "userland.js", "config.js", "binloader.js",
+    var files = ["types.js", "defs.js", "userland.js", "config.json", "binloader.js",
         "check-jailbroken.js", "kernel.js", "lapse.js", "loader.js",
         "netctrl_c0w_twins.js", "serve.js.aes", "dummy_psn.json.aes"];
     var passed = 0;
